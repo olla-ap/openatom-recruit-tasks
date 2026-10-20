@@ -1,0 +1,15 @@
+# 编译输出
+out/
+target/
+*.class
+
+# IDEA
+.idea/
+*.iml
+
+# 第 7 题运行期生成的文件
+temp/
+
+# 系统文件
+.DS_Store
+Thumbs.db

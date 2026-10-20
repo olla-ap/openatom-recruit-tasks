@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.openatom</groupId>
+    <artifactId>openatom-recruit-tasks</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>openatom-recruit-tasks</name>
+    <description>开放原子工作室后端招新题（第 1-8 题）Java 实现</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
+
+    <!-- 本阶段全部为基础题，不依赖任何第三方库 -->
+</project>
