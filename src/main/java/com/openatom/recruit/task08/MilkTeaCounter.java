@@ -14,9 +14,12 @@ public class MilkTeaCounter {
     /**
      * 店员放奶茶：吧台满了就等待，放完通知顾客
      */
+
+    // synchronized关键字：保证同一时刻最多只有一个线程被执行
     public synchronized void put(String staffName) throws InterruptedException {
         // 用 while 而不是 if：被唤醒后要重新检查条件，防止虚假唤醒
         while (milkTeaCount >= MAX_CAPACITY) {
+            // 释放锁，线程进入等待状态
             wait();
         }
 

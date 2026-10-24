@@ -54,6 +54,7 @@ public class FileChunkTransfer {
             long written = 0;
             while (written < currentChunkSize) {
                 // 每次最多读 buffer 长度，并且不能超过本片剩余量
+                // 返还本次实际读到的字节数
                 int readLength = in.read(buffer, 0, (int) Math.min(BUFFER_SIZE, currentChunkSize - written));
                 if (readLength == -1) {
                     break;   // 文件已读完（理论上不会提前触发）
@@ -96,7 +97,7 @@ public class FileChunkTransfer {
         }
 
         // 2. 按分片后缀数字排序（字符串排序会把 part10 排到 part2 前面，必须转成数字比）
-        Collections.sort(parts, new Comparator<File>() {
+        parts.sort(new Comparator<File>() {
             @Override
             public int compare(File f1, File f2) {
                 return parsePartIndex(f1) - parsePartIndex(f2);

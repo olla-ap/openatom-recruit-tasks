@@ -17,6 +17,7 @@ public class Staff implements Runnable {
     }
 
     @Override
+    // 循环制作奶茶
     public void run() {
         try {
             for (int i = 0; i < cupsToMake; i++) {
